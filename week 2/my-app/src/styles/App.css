@@ -1,0 +1,121 @@
+/* DASHBOARD GENERAL */
+.dashboard {
+  min-height: 100vh;
+  background: #f0f2f5;
+}
+
+/* HEADER */
+.dashboard-header {
+  background: white;
+  padding: 20px 40px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dashboard-header h1 {
+  margin: 0;
+}
+
+/* MAIN GRID */
+.dashboard-main {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* SECCIONES */
+.dashboard-section {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* RESPONSIVE */
+@media (min-width: 1024px) {
+  .dashboard-section:nth-child(1) {
+    grid-column: 1 / 9;
+  }
+
+  .dashboard-section:nth-child(2) {
+    grid-column: 9 / 13;
+  }
+
+  .dashboard-section.dashboard-list {
+    grid-column: 1 / 13;
+  }
+}
+
+@media (max-width: 1023px) {
+  .dashboard-section {
+    grid-column: 1 / 13;
+  }
+}
+
+/* ITEM LIST */
+.item-list {
+  padding: 10px;
+}
+
+.items {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.item-card {
+  background: #fafafa;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* STATS */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.stat {
+  text-align: center;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* REAL TIME */
+.realtime-indicator {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.realtime-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.realtime-label {
+  text-align: center;
+}
+
+.realtime-timestamp {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
