@@ -55,7 +55,7 @@ Repite en:
 - `week 4`
 - `week 5\starter`
 
-Si quieres ejecutar varias apps a la vez, abre una terminal por proyecto. Los puertos usados en mi sesión fueron 5175, 5174, 5173 y 5176; Vite elige puertos por defecto si no se especifica.
+Para ejecutar varias apps a la vez, abre una terminal por proyecto. Los puertos usados en mi sesión fueron 5175, 5174, 5173 y 5176; Vite elige puertos por defecto si no se especifica.
 
 Build y despliegue
 
@@ -69,14 +69,9 @@ Los resultados del build son estáticos y listos para servir en Netlify, Vercel,
 
 Notas para desarrolladores
 - Para añadir o modificar UI, edita los componentes en `src/components` y los estilos correspondientes; Vite recarga automáticamente.
-- Si quieres unificar diseño entre semanas, propongo mover variables CSS a un archivo compartido y aplicar colores/tipografías comunes.
+- Para unificar diseño entre semanas, mover variables CSS a un archivo compartido y aplicar colores/tipografías comunes.
 
-Posibles mejoras
-- Hacer el navbar responsive y accesible.
-- Añadir pruebas unitarias (Vitest) para componentes clave.
-- Extraer un pequeño paquete de componentes reutilizables.
 
-Contacto / próximos pasos
 
-Si quieres que reescriba el README en otro estilo, que lo traduzca o que cree PRs por feature (p. ej. navbar responsive), lo hago ahora y lo subo en una rama separada.
+
 
