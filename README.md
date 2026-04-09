@@ -1,72 +1,82 @@
-# Proyecto Inmobiliaria — Resumen de cambios y ejecución
+## Inmobiliaria — Proyecto por semanas
 
-Este repositorio contiene ejercicios por semana. He aplicado estilos básicos y un navbar en las semanas 1–5 y añadí archivos y ajustes para que cada proyecto tenga una apariencia organizada.
+Este repositorio agrupa ejercicios semanales (1–5) que implementan pequeñas versiones de un catálogo inmobiliario. El objetivo es tener demos independientes por semana que muestren componentes UI, filtrado, búsqueda y layouts —útiles para aprendizaje o como base para un proyecto más grande.
 
-## Cambios principales
-- Semana 1: `week 1/index.html`, `week 1/styles.css` (página estática + navbar)
-- Semana 2: `week 2/my-app/src/components/header.tsx`, `week 2/my-app/src/App.css` (Header -> navbar + estilos)
-- Semana 3: `week 3/3-proyecto/starter/src/components/Navbar.tsx`, `week 3/3-proyecto/starter/src/styles/global.css`, `week 3/3-proyecto/starter/src/AppCatalog.tsx`, `week 3/3-proyecto/starter/src/main.tsx` (Navbar + estilos globales)
-- Semana 4: `week 4/src/components/Navbar.tsx`, `week 4/src/styles/global.css`, `week 4/src/App.tsx`, `week 4/src/main.tsx` (Navbar + estilos)
-- Semana 5: `week 5/starter/components/Layout/Layout.tsx`, `week 5/starter/styles.css` (Navbar integrado en `Layout` y ajustes de estilo)
+Contenido y propósito
+- `week 1/` — demo HTML/CSS estático (página simple de ejemplo).
+- `week 2/my-app/` — app React + Vite con componentes de listado y formulario.
+- `week 3/3-proyecto/starter/` — starter del catálogo con hooks y componentes reutilizables.
+- `week 4/` — versión del catálogo con mayor componentización.
+- `week 5/starter/` — layout con `ConfigContext`, `Layout` y ajustes finales.
 
-## Cómo ejecutar (rápido)
+Qué encontrarás (alto nivel)
+- Componentes UI: `Card`, `Navbar`, `FilterPanel`, `ItemList`, `ItemCard`, `SearchBar`.
+- Hooks: `useDebounce`, `useFetch`, `useLocalStorage` (dependiendo de la semana).
+- Datos de ejemplo: `data/items.ts` con mock data para poblar listas.
+- Estilos: ficheros `styles.css` o `styles/global.css` por proyecto, con variables básicas.
 
-- Semana 1 (archivo estático): abrir `week 1/index.html` en el navegador o en PowerShell:
+Tecnologías y herramientas
+- Node.js y npm
+- Vite (dev server y build)
+- React (v18+)
+- TypeScript en proyectos que incluyen `tsconfig.json`
+- CSS (sin framework CSS principal; es CSS a medida por carpeta)
+
+Cómo se hizo (breve)
+- Cada semana se desarrolló como un proyecto independiente para facilitar la experimentación.
+- Se usaron componentes funcionales de React y hooks para manejar estado y efectos.
+- Mock data en `data/items.ts` permite testear UI sin backend.
+
+Cómo ejecutar
+
+1) Requisitos
+
+- Instala Node.js (16+) y npm.
+
+2) Semana 1 (estático)
 
 ```powershell
-Invoke-Item "week 1\index.html"
+cd "week 1"
+Invoke-Item "index.html"
 ```
 
-- Semanas con Vite/React (2–5): desde cada carpeta correspondiente ejecutar:
+3) Semanas 2–5 (Vite + React)
+
+Para cada subproyecto, por ejemplo semana 2:
 
 ```powershell
 cd "week 2\my-app"
 npm install
 npm run dev
-
-cd "..\..\week 3\3-proyecto\starter"
-npm install
-npm run dev
-
-cd "..\..\..\week 4"
-npm install
-npm run dev
-
-cd "..\week 5\starter"
-npm install
-npm run dev
 ```
 
-Puertos usados en mi sesión (puedes cambiarlos):
-- Semana 2: `5175`
-- Semana 3: `5174`
-- Semana 4: `5173`
-- Semana 5: `5176`
+Repite en:
+- `week 3\3-proyecto\starter`
+- `week 4`
+- `week 5\starter`
 
-Accede desde el navegador en:
-- http://localhost:5175/
-- http://localhost:5174/
-- http://localhost:5173/
-- http://localhost:5176/
+Si quieres ejecutar varias apps a la vez, abre una terminal por proyecto. Los puertos usados en mi sesión fueron 5175, 5174, 5173 y 5176; Vite elige puertos por defecto si no se especifica.
 
-## Git
-- Remote: `https://github.com/nacoooobit/inmobiliaria-3171618.git`
-- Branch usado: `main`
-
-Comandos útiles si quieres commitear/pushear manualmente:
+Build y despliegue
 
 ```bash
-git status
-git add -A
-git commit -m "feat: add basic styling and navbar for weeks 1-5"
-git push origin main
+cd <subproyecto>
+npm run build
+npm run preview   # para probar el build localmente
 ```
 
-Nota: en mi ejecución `git status` mostró "No changes to commit" y `git push` devolvió "Everything up-to-date", por eso no se creó un nuevo commit en esta sesión.
+Los resultados del build son estáticos y listos para servir en Netlify, Vercel, GitHub Pages u otro host.
 
-## Siguientes pasos sugeridos
-- Hacer el navbar responsive (mobile). 
-- Unificar paleta de colores si quieres consistencia entre semanas.
-- Crear una rama específica y abrir un PR si prefieres revisar antes de fusionar.
+Notas para desarrolladores
+- Para añadir o modificar UI, edita los componentes en `src/components` y los estilos correspondientes; Vite recarga automáticamente.
+- Si quieres unificar diseño entre semanas, propongo mover variables CSS a un archivo compartido y aplicar colores/tipografías comunes.
 
-Si quieres, hago uno de estos cambios ahora y lo subo en una rama nueva.
+Posibles mejoras
+- Hacer el navbar responsive y accesible.
+- Añadir pruebas unitarias (Vitest) para componentes clave.
+- Extraer un pequeño paquete de componentes reutilizables.
+
+Contacto / próximos pasos
+
+Si quieres que reescriba el README en otro estilo, que lo traduzca o que cree PRs por feature (p. ej. navbar responsive), lo hago ahora y lo subo en una rama separada.
+
