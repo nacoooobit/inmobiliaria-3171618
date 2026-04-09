@@ -8,7 +8,17 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 
   return (
     <div data-theme={dataTheme} className={`font-${config.fontSize} density-${config.density}`}>
-      {children}
+      <header className="site-header">
+        <div className="container">
+          <h1 className="brand">Starter Week 5</h1>
+          <nav className="nav-links">
+            <a href="#">Inicio</a>
+            <a href="#">Ajustes</a>
+            <a href="#">Ayuda</a>
+          </nav>
+        </div>
+      </header>
+      <main>{children}</main>
     </div>
   );
 };

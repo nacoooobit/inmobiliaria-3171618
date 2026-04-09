@@ -16,3 +16,11 @@ header {
 button {
   margin-left: 0.5rem;
 }
+
+.site-header .container{display:flex;align-items:center;justify-content:space-between;max-width:980px;margin:0 auto}
+.site-header .brand{margin:0;font-size:1.1rem}
+.nav-links a{color:rgba(255,255,255,0.95);text-decoration:none;margin-left:0.8rem;font-weight:600}
+
+.container{max-width:980px;margin:0 auto;padding:0 1rem}
+
+main{padding:1.5rem}
